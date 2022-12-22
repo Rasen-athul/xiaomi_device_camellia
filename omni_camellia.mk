@@ -1,7 +1,7 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
-# Copyright (C) 2020 The TWRP Open Source Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2023 The Android Open Source Project
+# Copyright (C) 2023 The OrangeFox Recovery Project
+# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,13 +26,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/xiaomi/camellia/device.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := camellia
-PRODUCT_NAME := omni_camellia
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := M2103K19C
-PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_RELEASE_NAME := Redmi M2103K19C
+PRODUCT_NAME := twrp_camellia
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := M2103K
+PRODUCT_MANUFACTURER := Xiaomi
